@@ -1,0 +1,37 @@
+#!/usr/bin/env node
+
+const surf = require('../lib/surf')
+const parse = require('minimist')
+const { resolve } = require('path')
+
+const args = parse(process.argv, {
+  alias: {
+    H: 'help',
+    h: 'host',
+    p: 'port'
+  },
+  boolean: ['H'],
+  default: {
+    h: '127.0.0.1',
+    p: 3000
+  }
+})
+let [,, file] = args._;
+
+const help = () => {
+  console.log(`Usage: surf [args] <file>
+  -h  Host to listen on   [127.0.0.1]
+  -p  Port to listen on        [3000]
+  `);
+}
+if (args.H) {
+  help();
+  process.exit(0);
+}
+
+if (file && '/' !== file[0]) {
+  file = resolve(process.cwd(), file)
+}
+
+const {port, host} = args
+surf(host, port, file)

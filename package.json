@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "surf json files like cowabunga!",
   "main": "surf.js",
-  "scripts": {
-  },
+  "scripts": {},
   "author": "benmann",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "minimist": "^1.2.0"
+  }
 }
