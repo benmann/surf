@@ -12,7 +12,7 @@ const args = parse(process.argv, {
   },
   boolean: ['H'],
   default: {
-    h: '127.0.0.1',
+    h: '127.0.0.0',
     p: 3000
   }
 })
@@ -20,7 +20,7 @@ let [,, file] = args._;
 
 const help = () => {
   console.log(`Usage: surf [args] <file>
-  -h  Host to listen on   [127.0.0.1]
+  -h  Host to listen on   [0.0.0.0]
   -p  Port to listen on        [3000]
   `);
 }
