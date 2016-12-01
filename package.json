@@ -1,0 +1,10 @@
+{
+  "name": "surf",
+  "version": "1.0.0",
+  "description": "surf json files like cowabunga!",
+  "main": "surf.js",
+  "scripts": {
+  },
+  "author": "benmann",
+  "license": "MIT"
+}
