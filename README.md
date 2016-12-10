@@ -20,7 +20,7 @@ Fetch:
 `curl 127.0.0.1:3333/data.json` 
    
 ✋ Won't work:   
-`surf -h 127.0.0.1 -p 3333 xyz.json`
+`curl 127.0.0.1:3333/xyz.json`
 
 ### License
 MIT
